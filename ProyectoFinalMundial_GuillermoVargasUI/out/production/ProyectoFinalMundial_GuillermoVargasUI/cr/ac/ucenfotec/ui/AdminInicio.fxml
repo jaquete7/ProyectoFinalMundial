@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.ucenfotec.tl.AdministradorController">
+    <children>
+        <Label fx:id="lblTitulo" layoutX="493.0" layoutY="24.0" text="Bienvenido">
+            <font>
+                <Font name="Segoe UI" size="36.0" />
+            </font>
+        </Label>
+        <VBox layoutY="-1.0" prefHeight="827.0" prefWidth="222.0" spacing="10.0" style="-fx-background-color: #1a96db;">
+            <children>
+                <Pane prefHeight="87.0" prefWidth="222.0" />
+                <Button fx:id="btnInicio" mnemonicParsing="false" prefHeight="44.0" prefWidth="224.0" style="-fx-background-color: #0488d0;" text="MENU" textFill="#eeeeee">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#salir" prefHeight="44.0" prefWidth="224.0" style="-fx-background-color: #1a96db;" text="Salir" textFill="#eeeeee">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </VBox>
+        <TableView fx:id="tblUsuarios" layoutX="222.0" layoutY="425.0" prefHeight="150.0" prefWidth="856.0">
+            <columns>
+                <TableColumn fx:id="colUno" maxWidth="800.0" prefWidth="100.0" text="Identificación" />
+                <TableColumn fx:id="colDos" prefWidth="100.0" text="Nombre" />
+                <TableColumn fx:id="colTres" prefWidth="130.0" text="Apellidos" />
+                <TableColumn fx:id="colCuatro" prefWidth="140.0" text="Correo" />
+                <TableColumn fx:id="colCinco" prefWidth="99.0" text="NombreUsuario" />
+                <TableColumn fx:id="colSeis" prefWidth="131.0" text="Contraseña" />
+                <TableColumn fx:id="colSiete" prefWidth="70.0" text="Avatar" />
+                <TableColumn fx:id="colOcho" prefWidth="83.0" text="Equipo Favorito" />
+            </columns>
+        </TableView>
+        <TableView fx:id="tblEquipos" layoutX="222.0" layoutY="615.0" prefHeight="200.0" prefWidth="500.0">
+            <columns>
+                <TableColumn fx:id="codigo" prefWidth="100.0" text="Codigo" />
+                <TableColumn fx:id="nombrePais" prefWidth="100.0" text="Nombre Pais" />
+                <TableColumn fx:id="ranking" prefWidth="150.0" text="Ranking" />
+                <TableColumn fx:id="bandera" prefWidth="150.0" text="Bandera" />
+
+            </columns>
+        </TableView>
+        <Button fx:id="btnRegistrarEquipo" layoutX="230.0" layoutY="100.0" mnemonicParsing="false" onAction="#validarDatosEquipo" text="Registrar Equipo">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnListarUsuarios" layoutX="230.0" layoutY="390.0" mnemonicParsing="false" onAction="#cargarListaUsuarios" text="Listar usuarios">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnListarEquipos" layoutX="230.0" layoutY="580.0" mnemonicParsing="false" onAction="#cargarListaEquipos" text="Listar Equipos">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <TextField fx:id="txtCodigoEquipo" layoutX="230.0" layoutY="174.0" prefHeight="30.0" prefWidth="128.0" promptText="Codigo Equipo">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtNombrePais" layoutX="389.0" layoutY="174.0" prefHeight="30.0" prefWidth="106.0" promptText="Nombre Pais">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtRanking" layoutX="230.0" layoutY="253.0" prefHeight="30.0" prefWidth="128.0" promptText="Ranking">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtBandera" layoutX="389.0" layoutY="253.0" prefHeight="30.0" prefWidth="106.0" promptText="Bandera">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Label layoutX="230.0" layoutY="149.0" text="Codigo Equipo:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="389.0" layoutY="149.0" text="Nombre Pais:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="230.0" layoutY="223.0" text="Ranking:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="389.0" layoutY="223.0" text="Bandera:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+      <Button fx:id="btnRegistrarMundial" layoutX="558.0" layoutY="100.0" mnemonicParsing="false" onAction="#registrarMundial" text="Registrar Mundial">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtAñoMundial" layoutX="562.0" layoutY="174.0" prefHeight="30.0" prefWidth="116.0" promptText="Año">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPaisOrganizador" layoutX="708.0" layoutY="174.0" prefHeight="30.0" prefWidth="128.0" promptText="Pais Organizador">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtEstadoMundial" layoutX="562.0" layoutY="253.0" prefHeight="30.0" prefWidth="116.0" promptText="(Activo/Inactivo)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="569.0" layoutY="149.0" text="Año">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="708.0" layoutY="149.0" text="Pais Organizador">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="561.0" layoutY="223.0" text="Estado">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMundiales" layoutX="755.0" layoutY="615.0" prefHeight="200.0" prefWidth="251.0">
+        <columns>
+          <TableColumn fx:id="añoTabla" prefWidth="66.0" text="Año" />
+          <TableColumn fx:id="paisOrganizadorTabla" prefWidth="116.0" text="Pais Organizador" />
+            <TableColumn fx:id="estadoTabla" prefWidth="68.0" text="Estado" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnListarMundiales" layoutX="755.0" layoutY="580.0" mnemonicParsing="false" onAction="#listarMundiales" text="Listar Mundiales">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnActivarMundial" layoutX="564.0" layoutY="333.0" mnemonicParsing="false" onAction="#cambiarEstadoMundial" text="Activar/Desactivar Mundial">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="569.0" layoutY="380.0" text="Año Mundial:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAñoMundialActivar" layoutX="667.0" layoutY="375.0" prefHeight="30.0" prefWidth="83.0" promptText="Año">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnRegistrarGrupo" layoutX="881.0" layoutY="100.0" mnemonicParsing="false" onAction="#registrarGrupo" text="Registrar Grupo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="887.0" layoutY="149.0" text="Codigo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoGrupo" layoutX="881.0" layoutY="174.0" prefHeight="30.0" prefWidth="83.0" promptText="Codigo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="1006.0" layoutY="149.0" text="Nombre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombreGrupo" layoutX="997.0" layoutY="174.0" prefHeight="30.0" prefWidth="83.0" promptText="Nombre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="887.0" layoutY="223.0" text="Año Mundial">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAñoMundialGrupo" layoutX="881.0" layoutY="253.0" prefHeight="30.0" prefWidth="83.0" promptText="Año">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnListarGrupos" layoutX="1043.0" layoutY="580.0" mnemonicParsing="false" onAction="#listarGrupos" text="Listar Grupos">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblGrupos" layoutX="1039.0" layoutY="615.0" prefHeight="200.0" prefWidth="298.0">
+        <columns>
+          <TableColumn fx:id="codigoTablaGrupo" prefWidth="116.0" text="Codigo" />
+          <TableColumn fx:id="nombreTablaGrupo" prefWidth="181.0" text="Nombre" />
+        </columns>
+      </TableView>
+      <Label layoutX="1163.0" layoutY="585.0" text="Año Mundial:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAñoMundialListar" layoutX="1254.0" layoutY="580.0" prefHeight="30.0" prefWidth="83.0" promptText="Año">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnRegistrarLiga" layoutX="1123.0" layoutY="100.0" mnemonicParsing="false" onAction="#registrarLiga" text="Registrar Liga">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="1123.0" layoutY="149.0" text="Nombre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombreLiga" layoutX="1122.0" layoutY="174.0" prefHeight="30.0" prefWidth="83.0" promptText="Nombre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="1124.0" layoutY="223.0" text="Mundial ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAñoMundialLiga" layoutX="1122.0" layoutY="253.0" prefHeight="30.0" prefWidth="83.0" promptText="Año">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="1228.0" layoutY="149.0" text="Fecha Creacion">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFechaLiga" layoutX="1228.0" layoutY="174.0" prefHeight="30.0" prefWidth="83.0" promptText="Fecha">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="1225.0" layoutY="223.0" text="Estado">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEstadoLiga" layoutX="1226.0" layoutY="253.0" prefHeight="30.0" prefWidth="116.0" promptText="(Activo/Inactivo)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnListarLigas" layoutX="1372.0" layoutY="580.0" mnemonicParsing="false" onAction="#listarLigas" text="Listar Ligas">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblLigas" layoutX="1372.0" layoutY="615.0" prefHeight="200.0" prefWidth="298.0">
+        <columns>
+          <TableColumn fx:id="nombreTablaLiga" prefWidth="72.0" text="Nombre" />
+          <TableColumn fx:id="fechaTablaLiga" prefWidth="89.0" text="Fecha Creacion" />
+            <TableColumn fx:id="mundialTablaLiga" prefWidth="65.0" text="Mundial" />
+            <TableColumn fx:id="estadoTablaLiga" prefWidth="71.0" text="Estado" />
+        </columns>
+      </TableView>
+      <Label layoutX="1486.0" layoutY="585.0" text="Año Mundial:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAñoLigaListar" layoutX="1572.0" layoutY="580.0" prefHeight="30.0" prefWidth="83.0" promptText="Año">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnActivarLiga" layoutX="1122.0" layoutY="333.0" mnemonicParsing="false" onAction="#cambiarEstadoLiga" prefHeight="30.0" prefWidth="170.0" text="Activar/Desactivar Liga">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="1122.0" layoutY="380.0" text="Nombre Liga:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombreLigaActivar" layoutX="1213.0" layoutY="375.0" prefHeight="30.0" prefWidth="80.0" promptText="Nombre ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnAgregarEquipoAGrupo" layoutX="1402.0" layoutY="100.0" mnemonicParsing="false" onAction="#agregarEquipoAGrupo" text="Agregar Equipo a Grupo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="1407.0" layoutY="149.0" text="Año Mundial">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAñoEquipoGrupo" layoutX="1402.0" layoutY="174.0" prefHeight="30.0" prefWidth="83.0" promptText="Año Mundial">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="1400.0" layoutY="223.0" text="Codigo Grupo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoGrupoEquipo" layoutX="1402.0" layoutY="253.0" prefHeight="30.0" prefWidth="83.0" promptText="Codigo Grupo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="1523.0" layoutY="149.0" text="Codigo Equipo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoEquipoGrupo" layoutX="1516.0" layoutY="174.0" prefHeight="30.0" prefWidth="106.0" promptText="Codigo Equipo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+    </children>
+</AnchorPane>

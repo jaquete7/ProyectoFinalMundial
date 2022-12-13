@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.ucenfotec.tl.RegistroAdminController">
+    <children>
+        <Button layoutX="222.0" layoutY="521.0" mnemonicParsing="false" onAction="#validarDatos" text="Registrar">
+            <font>
+                <Font size="18.0" />
+            </font></Button>
+        <Label fx:id="lblDatos" layoutX="38.0" layoutY="59.0" text="Ingrese los datos del Administrador">
+            <font>
+                <Font size="30.0" />
+            </font></Label>
+
+        <TextField fx:id="txtIdentificacion" layoutX="200.0" layoutY="136.0" promptText="Identificacion" />
+        <TextField fx:id="txtNombre" layoutX="200.0" layoutY="191.0" promptText="Nombre" />
+        <TextField fx:id="txtApellidos" layoutX="200.0" layoutY="246.0" promptText="Apellidos" />
+
+        <TextField fx:id="txtCorreo" layoutX="200.0" layoutY="301.0" promptText="Correo" />
+        <TextField fx:id="txtNombreUsuario" layoutX="200.0" layoutY="356.0" promptText="Usuario" />
+        <PasswordField fx:id="txtPassword" layoutX="200.0" layoutY="411.0" promptText="Contraseña" />
+        <TextField fx:id="txtDireccion" layoutX="200.0" layoutY="466.0" promptText="Direccion" />
+
+
+
+    </children>
+</AnchorPane>

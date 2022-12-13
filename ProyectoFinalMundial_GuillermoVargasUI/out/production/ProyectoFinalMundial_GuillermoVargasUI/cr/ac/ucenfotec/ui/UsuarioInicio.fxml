@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.ucenfotec.tl.UsuarioController">
+    <children>
+        <Label fx:id="lblTitulo" layoutX="233.0" layoutY="20.0" text="Bienvenido">
+            <font>
+                <Font name="Segoe UI" size="36.0" />
+            </font>
+        </Label>
+        <VBox layoutY="-1.0" prefHeight="827.0" prefWidth="222.0" spacing="10.0" style="-fx-background-color: #1a96db;">
+            <children>
+                <Pane prefHeight="87.0" prefWidth="222.0" />
+                <Button fx:id="btnInicio" mnemonicParsing="false" prefHeight="44.0" prefWidth="224.0" style="-fx-background-color: #0488d0;" text="MENU" textFill="#eeeeee">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#salir" prefHeight="44.0" prefWidth="224.0" style="-fx-background-color: #1a96db;" text="Salir" textFill="#eeeeee">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </VBox>
+        <Button fx:id="btnRegistrarseALiga" layoutX="233.0" layoutY="146.0" mnemonicParsing="false" onAction="#registrarUsuarioALiga" text="Registrarse a Liga">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Label layoutX="230.0" layoutY="204.0" text="Nombre Liga">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtNombreLiga" layoutX="229.0" layoutY="229.0" prefHeight="30.0" prefWidth="83.0" promptText="Nombre Liga">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Label layoutX="332.0" layoutY="204.0" text="Identificacion Usuario">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtIdUsuario" layoutX="332.0" layoutY="229.0" prefHeight="30.0" prefWidth="127.0" promptText="ID Usuario">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Button fx:id="btnListarLigasInscritas" layoutX="236.0" layoutY="299.0" mnemonicParsing="false" onAction="#listarLigasInscritas" text="Listar Ligas Inscritas">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <TableView fx:id="tblLigasInscritas" layoutX="233.0" layoutY="343.0" prefHeight="200.0" prefWidth="333.0">
+            <columns>
+                <TableColumn fx:id="nombreTablaLigaIns" prefWidth="90.0" text="Nombre" />
+                <TableColumn fx:id="fechaTablaLigaIns" prefWidth="103.0" text="Fecha Creacion" />
+                <TableColumn fx:id="mundialTablaLigaIns" prefWidth="65.0" text="Mundial" />
+                <TableColumn fx:id="estadoTablaLigaIns" prefWidth="74.0" text="Estado" />
+            </columns>
+        </TableView>
+      <Label fx:id="lblPuntaje" layoutX="236.0" layoutY="89.0" text="Puntaje:">
+         <font>
+            <Font name="Segoe UI" size="24.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

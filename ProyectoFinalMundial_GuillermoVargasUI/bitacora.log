@@ -1,0 +1,2 @@
+Aug 26, 2022 5:15:11 PM cr.ac.ucenfotec.bl.entities.Usuario.MySqlUsuarioImpl buscarPuntaje
+SEVERE: Error grave al obtener puntos: Illegal operation on empty result set.
